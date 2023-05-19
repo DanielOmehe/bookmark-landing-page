@@ -88,7 +88,7 @@ html, body{
 }
 
 #header-content{
-    height: 680px;
+    height: 650px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -149,7 +149,7 @@ button{
     flex: 1.8;
     position: relative;
     z-index: 2;
-    padding-top: 40px;
+    margin-top: 80px;
 }
 
 .header-content-right .backdrop{
@@ -157,7 +157,7 @@ button{
     width: 654px;
     height: 400px;
     background: var(--soft-blue);
-    top: 38%;
+    top: 35%;
     left: 30%;
     border-bottom-left-radius: 200px;
 }
@@ -168,7 +168,7 @@ button{
     object-fit: cover;
     position: absolute;
     z-index: 2;
-    margin-top: -40px;
+    margin-top: -10px;
 }
 
 .attribution { font-size: 11px; text-align: center; }
