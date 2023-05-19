@@ -9,6 +9,7 @@
     --outline-primary: 1px solid var(--soft-blue);
     --outline-danger: 1px solid var(--soft-red);
     --outline-grey: 1px solid var(--grey);
+    --outline: 1px solid var(--grey-blue);
 
     --grey-blue: hsl(229, 8%, 60%);
     --grey: hsl(229, 8%, 95%);
@@ -19,6 +20,8 @@
 
     --outline-secondary: 1px solid var(--grey-blue);
     --outline-blue: 1px solid var(--dark-blue);
+
+    --blur-background: hsla(231, 82%, 20%, 0.692);
 
     --shadow: 0px 3px 2px 2px var(--grey-shadow);
     --card-shadow: 0px 3px 2px 4px var(--grey-shadow);
@@ -44,6 +47,10 @@ html, body{
 #header{
     width: 100%;
     height: 100vh;
+}
+
+.menu{
+    display: none;
 }
 
 .navigation{
@@ -537,3 +544,112 @@ footer{
 
 .attribution { width: 100%; justify-content: center; font-size: 14px; text-align: center; height: 100%; display: flex; align-items: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
+
+@media only screen and (max-width: 375px){
+    #header{
+        width: 100vw;
+        min-height: 100vh;
+    }
+
+    .navigation{
+        width: 100%;
+        padding: 20px;
+    }
+
+    .navigation.open{
+        visibility: hidden;
+    }
+
+    .nav-items{
+        display: none;
+    }
+
+    .menu{
+        display: block;
+        width: 100vw;
+        padding: 20px;
+        height: 100vh;
+        position: fixed;
+        height: 100vh;
+        top: 0;
+        left: -100%;
+        z-index: 1;
+        background: var(--blur-background);
+        transition: all .5s linear;
+    }
+
+    .menu.open{
+        left: 0;
+    }
+
+    .menu-header{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 4.5px;
+        margin-left: -2px;
+    }
+
+    .menu-header button{
+        width: 20px;
+        height: 20px;
+        background: transparent;
+        border: none;
+        outline: none;
+    }
+
+    .menu-items{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding-top: 2rem;
+        margin-bottom: 15rem;
+        gap: 20px;
+    }
+
+    .menu-item{
+        width: 100%;
+        height: 60px;
+        list-style: none;
+        text-align: center;
+        display: grid;
+        align-items: center;
+        border-bottom: var(--outline);
+        font-size: 20px;
+    }
+
+    .menu-item:nth-child(1){
+        border-top: var(--outline);
+        border-bottom: var(--outline);
+    }
+
+    .login{
+        width: 100%;
+        background: transparent;
+        border: 2px solid #fff;
+        border-radius: 5px;
+    }
+
+    .login a{
+        color: #fff;
+        font-size: var(--size);
+    }
+
+    .menu-item a{
+        color: var(--white);
+        text-decoration: none;
+    }
+
+    .menu-button{
+        display: block;
+    }
+
+    .icons{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+    }
+}
