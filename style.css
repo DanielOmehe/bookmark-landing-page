@@ -403,6 +403,10 @@ button{
     justify-content: space-between;
 }
 
+.question-header img{
+    cursor: pointer;
+}
+
 .frequently-asked-questions-wrapper button{
     background: var(--soft-blue);
     color: var(--white);
