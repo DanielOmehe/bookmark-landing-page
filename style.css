@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Rubik:wght@400;500&display=swap');
+
+:root{
+    --mobile: 375px;
+
+    --soft-blue: hsl(231, 69%, 63%);
+    --soft-red: hsl(0, 94%. 66%);
+
+    --grey-blue: hsl(229, 8%, 60%);
+    --dark-blue: hsl(229, 31%, 21%);
+
+    --size: 18px;
+    --weight-normal: 500;
+    --weight-light: 400;
+    --family: 'Rubik', sans-serif;;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--family);
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
