@@ -429,7 +429,7 @@ button{
     border-radius: 5px;
 }
 
-.contact{
+#contact{
     width: 100%;
     margin-top: 5rem;
     background: var(--soft-blue);
@@ -438,13 +438,13 @@ button{
     color: var(--white);
 }
 
-.contact p{
+#contact p{
     font-size: var(--size);
     margin-bottom: 2rem;
     letter-spacing: 5px;
 }
 
-.contact h1{
+#contact h1{
     font-size: 35px;
     padding: 0 35rem;
     margin-bottom: 2rem;
@@ -455,6 +455,18 @@ button{
     align-items: center;
     justify-content: center;
     gap: 20px;
+    position: relative;
+}
+
+.contact-form img{
+    position: absolute;
+    left: 55%;
+    top: 30%;
+    display: none;
+}
+
+.contact-form img.error{
+    display: block;
 }
 
 .contact-form input[type="email"]{
@@ -474,6 +486,54 @@ button{
     box-shadow: var(--grey-shadow);
 }
 
-.attribution { font-size: 11px; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); }
+footer{
+    width: 100%;
+    height: 100px;
+}
 
+.footer{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 15rem;
+    background-color: var(--dark-blue);
+}
+
+.footer-right{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+
+.footer-right img{
+    color: var(--white);
+}
+
+.footer-right ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.footer-right ul li{
+    list-style: none;
+}
+
+.footer-right ul li a{
+    color: var(--white);
+    font-size: var(--size);
+    text-decoration: none;
+    font-weight: 300;
+}
+
+.icons{
+    display: flex;
+    gap: 30px;
+}
+
+.attribution { width: 100%; justify-content: center; font-size: 14px; text-align: center; height: 100%; display: flex; align-items: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
