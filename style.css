@@ -219,6 +219,7 @@ button{
     width: 200px;
     list-style: none;
     padding: 30px 20px;
+    cursor: pointer;
 }
 
 .tab-item:hover{
@@ -323,7 +324,7 @@ button{
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 30px;
+    gap: 40px;
     margin-top: 30px;
 }
 
@@ -364,5 +365,59 @@ button{
     border: var(--outline-primary);
 }
 
+.frequently-asked-questions-wrapper{
+    width: 100%;
+    margin-top: 10rem;
+    text-align: center;
+}
+
+.frequently-asked-questions-wrapper .title{
+    font-size: 40px;
+    margin-bottom: 30px;
+}
+
+.frequently-asked-questions-wrapper .subtitle{
+    font-size: var(--size);
+    padding: 0 24rem;
+    margin-bottom: 5rem;
+}
+
+.frequently-asked-questions{
+    width: 50%;
+    margin: 0 auto;
+    border-top: 2px solid var(--grey);
+    margin-bottom: 5rem;
+}
+
+.question{
+    width: 100%;
+    height: 100px;
+    padding: 40px 20px;
+    border-bottom: 2px solid var(--grey);
+}
+
+.question-header{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.frequently-asked-questions-wrapper button{
+    background: var(--soft-blue);
+    color: var(--white);
+    border: var(--outline-primary);
+    box-shadow: var(--shadow);
+    border-radius: 5px;
+}
+
+
+
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
+
+
+
+
+
+
