@@ -88,6 +88,15 @@ html, body{
     font-size: 16px;
 }
 
+.menu-button{
+    width: 20px;
+    height: 20px;
+    border: none;
+    outline: none;
+    background: transparent;
+    display: none;
+}
+
 #header-content{
     height: 650px;
     display: flex;
@@ -418,6 +427,51 @@ button{
     border: var(--outline-primary);
     box-shadow: var(--shadow);
     border-radius: 5px;
+}
+
+.contact{
+    width: 100%;
+    margin-top: 5rem;
+    background: var(--soft-blue);
+    text-align: center;
+    padding: 5rem 0;
+    color: var(--white);
+}
+
+.contact p{
+    font-size: var(--size);
+    margin-bottom: 2rem;
+    letter-spacing: 5px;
+}
+
+.contact h1{
+    font-size: 35px;
+    padding: 0 35rem;
+    margin-bottom: 2rem;
+}
+
+.contact-form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.contact-form input[type="email"]{
+    height: 50px;
+    width: 400px;
+    outline: none;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.contact-form button{
+    background: var(--soft-red);
+    color: var(--white);
+    border: 2px solid var(--soft-red);
+    border-radius: 5px;
+    box-shadow: var(--grey-shadow);
 }
 
 .attribution { font-size: 11px; text-align: center; }
