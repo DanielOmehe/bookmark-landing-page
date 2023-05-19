@@ -21,6 +21,7 @@
     --outline-blue: 1px solid var(--dark-blue);
 
     --shadow: 0px 3px 2px 2px var(--grey-shadow);
+    --card-shadow: 0px 3px 2px 4px var(--grey-shadow);
 
     --size: 18px;
     --weight-normal: 500;
@@ -296,6 +297,68 @@ button{
     border: var(--outline-primary);
     border-radius: 5px;
     box-shadow: var(--shadow);
+}
+
+.browsers{
+    width: 100%;
+    text-align: center;
+    padding: 70px 0;
+}
+
+.browsers .title{
+    font-size: 40px;
+    margin-bottom: 30px;
+}
+
+.browsers .subtitle{
+    font-size: var(--size);
+    padding: 0 22rem;
+    line-height: 32px;
+}
+
+.browser-cards{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.browser-card{
+    padding: 40px 20px 30px;
+    width: 300px;
+    background: var(--white);
+    box-shadow: var(--card-shadow);
+    border-radius: 10px;
+}
+
+.browser-card:nth-child(2){
+    transform: translateY(40px);
+}
+
+.browser-card:nth-child(3){
+    transform: translateY(80px);
+}
+
+.browser-card h1{
+    font-size: var(--size);
+    margin-bottom: 20px;
+}
+
+.browser-card p{
+    font-size: var(--size);
+    margin-bottom: 20px;
+}
+
+.browser-card img{
+    margin-bottom: 20px;
+}
+
+.browser-card button{
+    width: 100%;
+    background: var(--soft-blue);
+    color: var(--white);
+    border: var(--outline-primary);
 }
 
 .attribution { font-size: 11px; text-align: center; }
