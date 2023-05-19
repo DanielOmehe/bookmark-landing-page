@@ -175,12 +175,15 @@ button{
 
 .main-content{
     height: auto;
-    padding: 60px 150px;
+    padding: 60px 0;
 }
 
 .features{
     height: auto;
     text-align: center;
+    width: 80%;
+    margin: 0 auto;
+    padding: 0;
 }
 
 .features .title{
@@ -256,11 +259,11 @@ button{
 
 .features-tab-left .backdrop{
     position: absolute;
-    width: 550px;
+    width: 650px;
     height: 300px;
     background: var(--soft-blue);
     top: 40%;
-    left: -25%;
+    left: -35%;
     border-bottom-right-radius: 200px;
     z-index: 0;
 }
@@ -363,6 +366,8 @@ button{
     background: var(--soft-blue);
     color: var(--white);
     border: var(--outline-primary);
+    border-radius: 5px;
+    box-shadow: var(--shadow);
 }
 
 .frequently-asked-questions-wrapper{
@@ -415,13 +420,6 @@ button{
     border-radius: 5px;
 }
 
-
-
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
-
-
-
-
-
 
