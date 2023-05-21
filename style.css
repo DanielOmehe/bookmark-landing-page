@@ -6,10 +6,10 @@
     --soft-blue: hsl(231, 69%, 63%);
     --soft-red: hsl(0, 94%, 66%);
 
-    --outline-primary: 1px solid var(--soft-blue);
-    --outline-danger: 1px solid var(--soft-red);
-    --outline-grey: 1px solid var(--grey);
-    --outline: 1px solid var(--grey-blue);
+    --outline-primary: 2px solid var(--soft-blue);
+    --outline-danger: 2px solid var(--soft-red);
+    --outline-grey: 2px solid var(--grey);
+    --outline: 2px solid var(--grey-blue);
 
     --grey-blue: hsl(229, 8%, 60%);
     --grey: hsl(229, 8%, 95%);
@@ -18,8 +18,8 @@
     --black: black;
     --white: white;
 
-    --outline-secondary: 1px solid var(--grey-blue);
-    --outline-blue: 1px solid var(--dark-blue);
+    --outline-secondary: 2px solid var(--grey-blue);
+    --outline-blue: 2px solid var(--dark-blue);
 
     --blur-background: hsla(231, 82%, 20%, 0.692);
 
@@ -89,8 +89,20 @@ html, body{
     cursor: pointer;
 }
 
+.nav-button:hover{
+    border: var(--outline-danger);
+    background: transparent;
+    color: var(--black);
+}
+
 .nav-button a{
     color: var(--white);
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.nav-button:hover a{
+    color: var(--soft-red);
     text-decoration: none;
     font-size: 16px;
 }
@@ -153,12 +165,24 @@ button{
     color: var(--white);
 }
 
+.primary:hover{
+    color: var(--soft-blue);
+    background: transparent;
+    border: var(--outline-primary);
+}
+
 .secondary{
     background: var(--grey);
     border: var(--outline-grey);
     box-shadow: var(--shadow);
     border-radius: 5px;
     color: var(--black);
+}
+
+.secondary:hover{
+    border: var(--outline-secondary);
+    color: var(--grey-blue);
+    background: transparent;
 }
 
 .header-content-right{
@@ -194,20 +218,21 @@ button{
     padding: 60px 0;
 }
 
-.features{
+#features{
     height: auto;
     text-align: center;
     width: 80%;
     margin: 0 auto;
     padding: 0;
+    transition: all .5s linear;
 }
 
-.features .title{
+#features .title{
     font-size: 40px;
     margin-bottom: 35px;
 }
 
-.features .subtitle{
+#features .subtitle{
     padding: 0 21em;
     line-height: 35px;
     font-size: var(--size);
@@ -246,6 +271,7 @@ button{
 }
 
 .tab-item.active{
+    color: var(--soft-red);
     border-bottom: 2px solid var(--soft-red);
 }
 
@@ -259,6 +285,7 @@ button{
     height: 550px;
     position: relative;
     display: none;
+    transition: all .5s linear;
 }
 
 .features-tab.active{
@@ -320,6 +347,7 @@ button{
     border: var(--outline-primary);
     border-radius: 5px;
     box-shadow: var(--shadow);
+    cursor: pointer;
 }
 
 .browsers{
@@ -353,6 +381,7 @@ button{
     background: var(--white);
     box-shadow: var(--card-shadow);
     border-radius: 10px;
+    transition: all .45s linear;
 }
 
 .browser-card:nth-child(2){
@@ -361,6 +390,10 @@ button{
 
 .browser-card:nth-child(3){
     transform: translateY(80px);
+}
+
+.browser-card:hover{
+    transform: translateY(-20px);
 }
 
 .browser-card h1{
@@ -384,6 +417,12 @@ button{
     border: var(--outline-primary);
     border-radius: 5px;
     box-shadow: var(--shadow);
+}
+
+.browser-card button:hover{
+    background: transparent;
+    color: var(--soft-blue);
+    border: var(--outline-primary);
 }
 
 .frequently-asked-questions-wrapper{
@@ -415,6 +454,12 @@ button{
     height: 100px;
     padding: 40px 20px;
     border-bottom: 2px solid var(--grey);
+    overflow-y: hidden;
+    transition: all .45s linear;
+}
+
+.question.active{
+    height: auto;
 }
 
 .question-header{
@@ -424,8 +469,20 @@ button{
     justify-content: space-between;
 }
 
-.question-header img{
+.arrow{
     cursor: pointer;
+}
+
+.arrow.active{
+    transform: rotate(180deg);
+}
+
+.question-article{
+    margin-top: 50px;
+    width: 100%;
+    text-align: left;
+    line-height: 35px;
+    font-size: var(--size);
 }
 
 .frequently-asked-questions-wrapper button{
@@ -443,6 +500,7 @@ button{
     text-align: center;
     padding: 5rem 0;
     color: var(--white);
+    margin-bottom: -60px;
 }
 
 #contact p{
@@ -462,17 +520,37 @@ button{
     align-items: center;
     justify-content: center;
     gap: 20px;
+}
+
+.contact-form .input-group{
+    margin-top: .1rem;
+    text-align: left;
     position: relative;
 }
 
-.contact-form img{
-    position: absolute;
-    left: 55%;
-    top: 30%;
+.contact-form .input-group p{
+    color: #fff;
     display: none;
 }
 
-.contact-form img.error{
+.contact-form .input-group p.error{
+    display: block;
+    font-size: 10px;
+    letter-spacing: 0px;
+    color: var(--soft-red);
+    position: absolute;
+    left: 0;
+
+}
+
+.contact-form .input-group img{
+    position: absolute;
+    left: 55%;
+    top: 34%;
+    display: none;
+}
+
+.contact-form .input-group img.error{
     display: block;
 }
 
@@ -491,6 +569,13 @@ button{
     border: 2px solid var(--soft-red);
     border-radius: 5px;
     box-shadow: var(--grey-shadow);
+    cursor: pointer;
+}
+
+.contact-form button:hover{
+    background: var(--white);
+    color: var(--soft-red);
+    border: var(--outline-danger);
 }
 
 footer{
@@ -516,7 +601,14 @@ footer{
 }
 
 .footer-right img{
+    width: 30px;
+    height: 30px;
+}
+
+.footer-right h1{
     color: var(--white);
+    font-size: var(--size);
+    margin-left: -10px;
 }
 
 .footer-right ul{
@@ -543,7 +635,7 @@ footer{
 }
 
 .attribution { width: 100%; justify-content: center; font-size: 14px; text-align: center; height: 100%; display: flex; align-items: center; }
-.attribution a { color: hsl(228, 45%, 44%); }
+.attribution a { color: var(--black); margin-left: 5px; text-decoration: none; }
 
 @media only screen and (max-width: 375px){
     #header{
@@ -570,33 +662,18 @@ footer{
         padding: 20px;
         height: 100vh;
         position: fixed;
-        height: 100vh;
         top: 0;
         left: -100%;
         z-index: 1;
         background: var(--blur-background);
         transition: all .5s linear;
+        position: relative;
     }
 
     .menu.open{
         left: 0;
     }
 
-    .menu-header{
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        margin-top: 4.5px;
-        margin-left: -2px;
-    }
-
-    .menu-header button{
-        width: 20px;
-        height: 20px;
-        background: transparent;
-        border: none;
-        outline: none;
-    }
 
     .menu-items{
         width: 100%;
@@ -635,6 +712,7 @@ footer{
     .login a{
         color: #fff;
         font-size: var(--size);
+        text-decoration: none;
     }
 
     .menu-item a{
@@ -651,5 +729,14 @@ footer{
         align-items: center;
         justify-content: center;
         gap: 30px;
+    }
+
+    .close-menu{
+        width: 20px;
+        height: 20px;
+        border: 2px solid #fff;
+        position: absolute;
+        left: 90%;
+        background: transparent;
     }
 }
