@@ -835,4 +835,225 @@ footer{
         top: 26%;
         border-bottom-left-radius: 150px;
     }
+
+    .main-content{
+        width: 100%;
+        padding: 20px;
+        margin-top: 8rem;
+    }
+
+    #features{
+        width: 100%;
+        padding: 0;
+    }
+
+    #features .title{
+        font-size: 30px;
+        padding: 0;
+        margin-bottom: 1rem;
+    }
+
+    #features .subtitle{
+        font-size: 16px;
+        padding: 0;
+        line-height: 1rem;
+    }
+
+    .features-tab-wrapper{
+        width: 100%;
+        margin-top: 10rem;
+    }
+
+    .tab-navigation{
+        width: 100%;
+    }
+
+    .tab-items{
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .tab-item{
+        width: 100%;
+        padding: 20px;
+        margin: 0;
+        display: grid;
+        place-items: center;
+    }
+
+    .features-tab-container{
+        width: 100%;
+        margin-top: 10rem;
+    }
+
+    .features-tab{
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .features-tab-left{
+        width: 100%;
+        position: relative;
+    }
+
+    .features-tab-left .backdrop{
+        width: 330px;
+        height: 180px;
+        top: 3rem;
+        left: -7%;
+        position: absolute;
+    }
+
+    .features-tab-left img{
+        width: 100%;
+    }
+
+    .features-tab-right{
+        width: 100%;
+        margin-top: 12rem;
+        text-align: center;
+    }
+
+    .features-tab-right h1{
+        font-size: 25px;
+        padding: 0;
+    }
+
+    .features-tab-right p{
+        padding: 0;
+    }
+
+    .features-tab-right button{ 
+        display: none;
+    }
+
+    .browsers{
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+
+    .browsers .title{
+        font-size: 25px;
+        padding: 0;
+    }
+
+    .browsers .subtitle{
+        font-size: 16px;
+        padding: 0;
+    }
+
+    .browser-cards{
+        flex-direction: column;
+    }
+
+    .browser-card:nth-child(1){
+        transform: translate(0px);
+    }
+
+    .browser-card:nth-child(2){
+        transform: translate(0px);
+    }
+
+    .browser-card:nth-child(3){
+        transform: translate(0px);
+    }
+
+    .frequently-asked-questions-wrapper{
+        width: 100%;
+        margin-top: 5rem;
+    }
+
+    .frequently-asked-questions-wrapper .title{
+        font-size: 20px;
+        padding: 0;
+    }
+
+    .frequently-asked-questions-wrapper .subtitle{
+        font-size: 16px;
+        padding: 0;
+        line-height: 1.5rem;
+    }
+
+    .frequently-asked-questions{
+        width: 100%;
+    }
+
+    .question{
+        width: 100%;
+    }
+
+    .question.active{
+        height: 350px;
+    }
+
+    .question-header p{
+        font-size: 13px;
+    }
+
+    .question-article{
+        font-size: 14px;
+        line-height: 1.5rem;
+        margin-top: 2.5rem;
+    }
+
+    #contact{
+        width: 100%;
+        position: absolute;
+        left: 0;
+    }
+
+    #contact p{
+        font-size: 14px;
+    }
+
+    #contact h1{
+        font-size: 30px;
+        padding: 0;
+    }
+
+    .contact-form{
+        flex-direction: column;
+        width: 100%;
+        padding: 20px;
+    }
+
+    .input-group{
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+
+    .contact-form input[type="email"]{
+        width: 100%;
+    }
+
+    .contact-form button{
+        width: 100%;
+    }
+
+    footer{
+        margin-top: 45rem;
+        height: auto;
+    }
+
+    .footer{
+        width: 100%;
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .footer-right{
+        flex-direction: column;
+        margin-bottom: 5rem;
+    }
+
+    .footer-right ul{
+        flex-direction: column;
+    }
+
+    .attribution{
+        padding: 20px;
+        line-height: 1rem;
+        word-spacing: 1px;
+    }
 }
