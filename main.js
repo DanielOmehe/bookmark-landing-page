@@ -47,12 +47,49 @@ arrows.forEach((arrow, index) => {
         questions.forEach(question => question.classList.remove('active'));
         if(!isOpen){
             questions[index].classList.add('active');
-            questions[index].firstChild.nextSibling.style.color = 'red';
             isOpen = true;
         }else{
             isOpen = false;
             questions[index].classList.remove('active');
-            questions[index].firstChild.nextSibling.style.color = 'black';
         }
     })
 });
+
+const contactForm = document.querySelector('.contact-form');
+const emailField = document.querySelector('input');
+
+const onError = (e, message) => {
+  const parent = e.target.parentElement;
+  const inputGroup = parent.firstChild.nextSibling;
+  const input = inputGroup.querySelector('input');
+  const error = inputGroup.querySelector('.text');
+  
+  if(error){
+    input.classList.add('error');
+    error.classList.add('error');
+    error.innerHTML = message;
+  }
+}
+
+const onSuccess = e => {
+    const parent = e.target.parentElement;
+    const inputGroup = parent.firstChild.nextSibling;
+    const input = inputGroup.querySelector('input');
+    const error = inputGroup.querySelector('.text');
+
+    input.classList.remove('error');
+    error.classList.remove('error');
+}
+
+contactForm.addEventListener('click', (e)=>{
+    e.preventDefault();
+    const email = emailField.value;
+
+    if(email === ''){
+        onError(e, 'Email is required!!!')
+    }else if(!/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(email)){
+        onError(e, 'Email is invalid!!!')
+    }else{
+        onSuccess(e)
+    }
+})

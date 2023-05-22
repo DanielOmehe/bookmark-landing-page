@@ -79,6 +79,10 @@ html, body{
     text-decoration: none;
 }
 
+.nav-item a:hover{
+    color: var(--soft-red);
+}
+
 .nav-button{
     width: 120px;
     height: 40px;
@@ -458,8 +462,12 @@ button{
     transition: all .45s linear;
 }
 
+.question:hover .question-header p{
+    color: var(--soft-red);
+}
+
 .question.active{
-    height: auto;
+    height: 300px;
 }
 
 .question-header{
@@ -467,6 +475,10 @@ button{
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+
+.question.active .question-header p{
+    color: var(--soft-red);
 }
 
 .arrow{
@@ -528,19 +540,23 @@ button{
     position: relative;
 }
 
-.contact-form .input-group p{
-    color: #fff;
+.text{
+    width: 100%;
+    border-radius: 0 0 5px 5px;
+    font-size: 14px;
+    color: var(--white);
+    position: absolute;
+    padding: 5px 10px;
+    left: 0;
+    top: 52px;
+    background: var(--soft-red);
+    color: var(--white);
     display: none;
+    font-weight: var(--weight-normal);
 }
 
-.contact-form .input-group p.error{
+.text.error{
     display: block;
-    font-size: 10px;
-    letter-spacing: 0px;
-    color: var(--soft-red);
-    position: absolute;
-    left: 0;
-
 }
 
 .contact-form .input-group img{
@@ -561,6 +577,10 @@ button{
     border: none;
     padding: 10px 20px;
     border-radius: 5px;
+}
+
+.contact-form input[type="email"].error{
+    border: var(--outline-danger);
 }
 
 .contact-form button{
@@ -627,6 +647,10 @@ footer{
     font-size: var(--size);
     text-decoration: none;
     font-weight: 300;
+}
+
+.footer-right ul li a:hover{
+    color: var(--soft-red);
 }
 
 .icons{
