@@ -24,7 +24,6 @@ closeBtn.addEventListener('click', ()=>{
     }
 })
 
-
 tabs.forEach((tab, index) => {
     tab.addEventListener('click', ()=>{
         tabs.forEach(tabs => tabs.classList.remove('active'))
