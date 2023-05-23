@@ -7,6 +7,7 @@ const tabs = document.querySelectorAll('.tab-item');
 const tabContents = document.querySelectorAll('.features-tab');
 const arrows = document.querySelectorAll('.arrow');
 const questions = document.querySelectorAll('.question');
+const line = document.querySelector('.line')
 
 menuBtn.addEventListener('click', ()=>{
     if(!isOpen) {
@@ -25,12 +26,15 @@ closeBtn.addEventListener('click', ()=>{
 })
 
 tabs.forEach((tab, index) => {
-    tab.addEventListener('click', ()=>{
+    tab.addEventListener('click', (e)=>{
         tabs.forEach(tabs => tabs.classList.remove('active'))
         tab.classList.add('active');
 
         tabContents.forEach(content => content.classList.remove('active'))
         tabContents[index].classList.add('active');
+
+        line.style.width = `${e.target.offsetWidth}px`
+        line.style.left = `${e.target.offsetLeft}px`
     })
 });
 
