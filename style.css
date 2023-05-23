@@ -254,6 +254,7 @@ button{
 }
 
 .tab-items{
+    position: relative;
     height: 100%;
     width: 60%;
     margin: 0 auto;
@@ -262,6 +263,16 @@ button{
     justify-content: center;
     gap: 40px;
     border-bottom: 2px solid var(--grey);
+}
+
+.line{
+    width: 200px;
+    position: absolute;
+    height: 5px;
+    top: 95%;
+    left: 5%;
+    background: var(--soft-red);
+    transition: left .35s linear;
 }
 
 .tab-item{
@@ -277,7 +288,6 @@ button{
 
 .tab-item.active{
     color: var(--soft-red);
-    border-bottom: 2px solid var(--soft-red);
 }
 
 .features-tab-container{
@@ -614,6 +624,18 @@ footer{
     background-color: var(--dark-blue);
 }
 
+.footer-logo{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+}
+
+.footer-logo h1{
+    font-size: 40px;
+    font-weight: 500;
+}
+
 .footer-right{
     display: flex;
     align-items: center;
@@ -672,7 +694,7 @@ footer{
     }
 
     .navigation.open{
-        display: none;
+        visibility: hidden;
     }
 
     .menu-button{
@@ -856,11 +878,12 @@ footer{
     #features .subtitle{
         font-size: 16px;
         padding: 0;
-        line-height: 1rem;
+        line-height: 1.5rem;
     }
 
     .features-tab-wrapper{
         width: 100%;
+        height: auto;
         margin-top: 10rem;
     }
 
@@ -889,6 +912,9 @@ footer{
     .features-tab{
         width: 100%;
         flex-direction: column;
+        padding: 0;
+        align-items: center;
+        justify-content: center;
     }
 
     .features-tab-left{
@@ -910,6 +936,7 @@ footer{
 
     .features-tab-right{
         width: 100%;
+        margin: 0;
         margin-top: 12rem;
         text-align: center;
     }
@@ -920,7 +947,8 @@ footer{
     }
 
     .features-tab-right p{
-        padding: 0;
+        padding: 0.5rem;
+        font-size: 15px;
     }
 
     .features-tab-right button{ 
@@ -1052,8 +1080,13 @@ footer{
     }
 
     .attribution{
-        padding: 20px;
-        line-height: 1rem;
-        word-spacing: 1px;
+        background: var(--dark-blue);
+        color: var(--white);
+        width: 100%;
+        height: fit-content;
+    }
+
+    .attribution a{
+        color: var(--white);
     }
 }
